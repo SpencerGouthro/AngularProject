@@ -1,0 +1,47 @@
+<div class="container">
+	<div id="main-page" class="clearfix">
+		<div class="row container">	
+			<div class="col-sm-12">
+
+
+				<!-- LOGGED IN VIEW -->
+				<div ng-show="isLoggedIn">
+					<div class="row">
+						<div class="col-sm-1">
+							<button class="btn btn-md btn-block btn-default login-btn" id="logout" ng-click="logout()">Logout</button>
+						</div>
+						<div class="col-sm-11">
+							<h3>Signed in as {{currentUser.info.display_name}}</h3>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-sm-6 listinprofile">
+							<p>List of Profiles:<br><br></p>
+							<p ng-repeat="profile in ProfileList"><a href="#/profiles/{{profile.$id}}/">{{profile.display_name}}</a></p>
+						</div>
+						<div class="col-sm-6 listinprofile">
+							<p>List of Teams:<br><br></p>
+							<p ng-repeat="team in TeamsList"><a href="#/teams/{{team.$id}}/">{{team.name}}</a></p>
+						</div>
+					</div>
+				</div>
+
+				<!-- LOGGED OUT VIEW -->
+				<div ng-hide="isLoggedIn">
+					<div class="row">
+						<div class="col-sm-4 col-sm-offset-4">
+							<h2>Please login to view app.</h2>
+							<button class="btn btn-lg btn-block btn-primary login-btn" id="fb-login" ng-click="loginWithFacebook()">Sign in with Facebook</button>
+						</div>
+
+						<div class="col-sm-4 col-sm-offset-4">
+							<button class="btn btn-lg btn-block btn-info login-btn" id="tw-login" ng-click="loginWithTwitter()">Sign in with Twitter</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>

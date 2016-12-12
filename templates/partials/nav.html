@@ -1,0 +1,103 @@
+<div class="container">
+  <div class="col-xs-12 no-float" id="header">
+    <div class="row">
+
+      <div class="col-sm-6" id="header-text">
+          <p>Welcome to the Friendly Gamers App!</p>
+      </div>
+
+      <div class="col-sm-6">
+        <div class="row" id="headerLinks">
+          <div class="col-lg-3 divAroundNavLinks">
+            <a class="navLink homepageLink" href="#/">Homepage</a>
+          </div>
+          <div class="col-lg-3 divAroundNavLinks">
+            <a class="navLink" href="#/myprofile">Your Profile</a>
+          </div>
+          <div class="col-lg-3 divAroundNavLinks">
+            <a class="navLink" href="#/myprofile" ng-click="showUpdateProfile()">Edit your Profile</a>
+          </div>
+          <div class="col-lg-3 divAroundNavLinks">
+            <a class="navLink" href="#/" ng-click="showAddTeam()">Create a team</a>
+          </div>      
+        </div>
+      </div>
+
+        <!-- TEAM CREATE MODAL -->
+              <div id="addTeamModal" class="modal fade" tabindex="-1" role="dialog">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title">Add a Team</h4>
+                      </div>
+                      <div class="modal-body">
+                        <form>
+                          Team name:<br>
+                          <input type="text" class="form-control modal-form" ng-model="newTeam.name">
+                          Team's games:<br>
+                          <input type="text" class="form-control modal-form" ng-model="newTeam.teamgames" placeholder="Example: Pacman, Call of Duty, Minecraft.">
+
+                            Team Gaming Platform:<br>
+                            <input type="radio" name="gender" value="PS4" ng-model="newTeam.platform"> PS4 <br>
+                            <input type="radio" name="gender" value="Xbox One" ng-model="newTeam.platform"> Xbox One<br>
+                            <input type="radio" name="gender" value="PC" ng-model="newTeam.platform"> PC <br>
+
+                          Description:<br>
+                          <textarea rows="4" cols="50" class="form-control modal-form" ng-model="newTeam.desc" placeholder="Additional information."></textarea>
+                        </form>
+                      </div>
+                      <div class="modal-footer">
+                        <button class="btn btn-lg btn-block btn-success" ng-click="addTeam(newTeam)">Add Team</button>
+                      </div>
+                  </div><!-- /.modal-content --> 
+                </div><!-- /.modal-dialog -->
+              </div><!-- /.modal -->
+
+        <!-- PROFILE CREATE MODAL -->
+              <div id="updateProfileModal" class="modal fade" tabindex="-1" role="dialog">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                      <h4 class="modal-title">Update your profile.</h4>
+                    </div>
+                    <div class="modal-body">
+                      <form>
+                        Username:<br>
+                        <input type="text" class="form-control modal-form" ng-model="currentUser.info.username">
+                        Age:<br>
+                        <input type="number" min="13" max="99" class="form-control modal-form" ng-model="currentUser.info.age">
+
+                        Location:<br>
+                        <select class="form-control modal-form" ng-model="currentUser.info.location">
+                          <option value="North America">North America</option>
+                          <option value="South America">South America</option>
+                          <option value="Europe">Europe</option>
+                          <option value="Asia">Asia</option>
+                          <option value="Australia">Australia</option>
+                          <option value="Africa">Africa</option>
+                          <option value="Antarctica">Antarctica</option>
+                        </select>
+
+                        Main Gaming Platform:<br>
+                        <input type="radio" name="gender" value="PS4" ng-model="currentUser.info.platform"> PS4 <br>
+                        <input type="radio" name="gender" value="Xbox One" ng-model="currentUser.info.platform"> Xbox One<br>
+                        <input type="radio" name="gender" value="PC" ng-model="currentUser.info.platform"> PC <br>
+
+                        Favourite Games:<br>
+                        <input type="text" class="form-control modal-form" ng-model="currentUser.info.favgames" placeholder="Pacman, Call of Duty, Minecraft.">
+                        Additional Information:<br>
+                        <textarea rows="4" cols="50" class="form-control modal-form" ng-model="currentUser.info.addinfo"></textarea>
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button class="btn btn-lg btn-block btn-success" ng-click="updateprofile()">Update Profile</button>
+                    </div>
+                  </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+              </div><!-- /.modal -->
+    </div>
+  </div>
+</div> 
+

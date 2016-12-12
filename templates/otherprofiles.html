@@ -1,0 +1,23 @@
+<div class="container">
+	<div class="row">
+		<div id="profile-page" class="clearfix">
+
+			<div class="col-sm-2 col-xs-12">
+				<img ng-src="{{currentUser.profilepic}}" id="profile-pic" class="img-responsive">
+			</div>
+
+			<div class="col-sm-10 col-xs-12">
+				<h4>Profile Info:</h4>
+				<ul class="profile-list-info">
+					<li id="profile-name">Name: {{currentUser.display_name}}</li>
+					<li id="profile-username">Username: {{currentUser.username}}</li>
+					<li id="profile-age">Age: {{currentUser.age}}</li>
+					<li id="profile-location">Location: {{currentUser.location}}</li>
+					<li id="profile-platform">Gaming System: {{currentUser.platform}}</li>
+					<li id="profile-favgames">Favourite Games: {{currentUser.favgames}}</li>
+					<li id="profile-addinfo">Additional Info: {{currentUser.addinfo}}</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>	

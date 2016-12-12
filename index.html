@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link rel='stylesheet' type='text/css' href='style.css'>
+		<title>Angular Project</title>
+	</head>
+
+	<body ng-app="angularProject" ng-controller="NavbarController">
+
+		<div ng-include="'templates/partials/nav.html'">
+		</div>
+
+		<div ng-view>
+		</div>
+<!-- GIT IS BEING WEIRD. IF I SEE THIS TEXT IN GIT THEN IT WORKED UNTIL THEN OH GOD OH GOD -->
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	    <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.1/js/bootstrap-modal.min.js"></script>
+		<!-- AngularJS -->
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+		<!-- Firebase -->
+		<script src="https://www.gstatic.com/firebasejs/3.6.0/firebase.js"></script>
+		<!-- AngularFire -->
+		<script src="https://cdn.firebase.com/libs/angularfire/2.1.0/angularfire.min.js"></script>
+		<!-- Angular Route -->
+		<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.js"></script> 
+
+		<script>
+					  // Initialize Firebase
+		  var config = {
+		    apiKey: "AIzaSyD9mCOEcu2i-qpsgv7k226hHE-2TGLxE0M",
+		    authDomain: "service-app-c882c.firebaseapp.com",
+		    databaseURL: "https://service-app-c882c.firebaseio.com",
+		    storageBucket: "service-app-c882c.appspot.com",
+		    messagingSenderId: "469028688748"
+		  };
+		  firebase.initializeApp(config);
+		</script>
+
+
+
+		<script src="app.js"></script>
+		<script src="controllers/login.js"></script>
+		<script src="controllers/main.js"></script>
+		<script src="controllers/profile.js"></script>
+		<script src="controllers/teams.js"></script>
+		<script src="controllers/profileid.js"></script>
+		<script src="controllers/navbar.js"></script>	
+		<script src="services/auth.js"></script>
+		<script src="services/profiles.js"></script>
+		<script src="services/teams.js"></script>
+
+
+
+
+	</body>
+</html>

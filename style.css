@@ -1,0 +1,152 @@
+
+body {
+    overflow-x: hidden;
+} 
+
+html,body,.container {
+	height: 100%;
+}
+
+.container {
+    display:table;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.row .no-float {
+    display: table-cell;
+    float: none;
+}
+
+#header { 
+	background-color: #58A4F2; 
+}
+
+#header-text {
+	font-size:2em;
+	padding:0.5em;
+	color: white;
+}
+
+.divAroundNavLinks {
+	padding-top:1.5em;
+	border-left:1px solid white;
+	height:77px;
+	text-align: center;
+
+}
+
+.divAroundNavLinks:hover {
+	background-color:#4989D6;
+}
+.navLink {
+	display: block;
+	color:white;
+	font-size:1.46em;
+	text-decoration: none;
+	height:100%;
+	width:100%;
+	
+}
+.navLink:visited {
+	color:white;
+	text-decoration: none;
+}
+.navLink:hover {
+	color:white;
+	text-decoration: none;
+}
+.navLink:active {
+	color:white;
+	text-decoration: none;
+}
+
+/*
+#header-buttons {
+	padding:1em;
+	margin-top:1em;
+}
+
+.header-btn {
+	margin-right:10px;
+	margin-bottom:10px;
+}
+
+.header-btn:hover {
+	border:1px solid white;
+}*/
+
+.join-div {
+	padding: 20px;
+}
+
+.divAroundBtnToJustAddPadding {
+	margin:10px;
+}
+
+.login-btn {
+	margin:15px;
+}
+
+#profile-page {
+	background-color: #F4FDFF;
+}
+
+#team-page {
+	background-color: #F4FDFF;
+}
+
+#main-page {
+	background-color: #F4FDFF;
+}
+
+#main-page p {
+	font-size:1.4em;
+}
+
+#profile-pic {
+	height:150px;
+	width:150px;
+	margin:25px;
+}
+
+.profile-list-info {
+	padding:0.5em;
+	list-style-type: none;
+}
+
+.profile-list-info li {
+	padding:1em;
+	font-size:1.2em;
+}
+
+#profile-bio {
+	font-size:1.2em;
+	padding:2em;
+}
+
+.profile-team-img {
+	width:150px;
+	height:150px;
+}
+
+#profile-teams a {
+	color:navy;
+}
+
+.listinprofile {
+	padding:10px;
+}
+
+.listinprofile a {
+	color:navy;
+}
+
+.listofteammembers {
+	padding:0.5em;
+	font-size:1.2em;
+}
+
+.listofteammembers a {
+	color: navy;
+}

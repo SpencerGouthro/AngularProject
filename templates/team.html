@@ -1,0 +1,67 @@
+<div class="container">
+	<div class="row">
+		<div id="team-page" class="clearfix">
+			<div class="row">
+				<div class="col-sm-5 col-xs-12">
+					<ul class="profile-list-info">
+						<li id="team-name">Team Name: {{currentTeam.name}}</li>
+						<li id="team-games">Games: {{currentTeam.teamgames}}</li>
+						<li id="team-platform">Gaming System: {{currentTeam.platform}}</li>
+						<li id="team-desc">Description: {{currentTeam.desc}}</li>
+					</ul>
+				</div>
+				<div class="col-sm-3 col-xs-12">
+					<div id="profile-members">
+						<div class="col-sm-6 listofteammembers">
+							<h4>List of Members:<br><br></h4>
+							<p ng-repeat="members in MemberList"><a href="#/profiles/{{members.userid}}/">{{members.name}}</a></p>
+ 						</div>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="row">
+						<div class="col-sm-6 divAroundBtnToJustAddPadding">
+							<button class="btn btn-block btn-md btn-success team-btn" ng-click="joinTeam()">Join team.</button>
+						</div>
+<!-- 						<div class="col-sm-6 divAroundBtnToJustAddPadding">
+							<button class="btn btn-block btn-md btn-warning team-btn" ng-click="showEditTeam()">Edit team.</button>
+						</div> -->
+						<div class="col-sm-6 divAroundBtnToJustAddPadding">
+							<button class="btn btn-block btn-md btn-danger team-btn" ng-click="leaveTeam()">Leave team.</button>
+						</div>
+					</div>
+				</div>
+
+
+					<!-- GETTING RID OF EDIT TEAM -->
+		<!-- 		<div id="editTeamModal" class="modal fade" tabindex="-1" role="dialog">
+				  <div class="modal-dialog" role="document">
+				    <div class="modal-content">
+   						<div class="modal-header">
+			              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			              <h4 class="modal-title">Edit a Team</h4>
+			            </div>
+			            <div class="modal-body">
+			              <form>
+			                Team name:<br>
+			                <input type="text" class="form-control modal-form" ng-model="newTeam.name" placeholder="Example: Team Green">
+			                Team's games:<br>
+			                <input type="text" class="form-control modal-form" ng-model="newTeam.teamgames" placeholder="Example: NHL 17, Minecraft, Pacman.">
+			                Platform:<br>
+			                <input type="text" class="form-control modal-form" ng-model="newTeam.platform" placeholder="Example: PS4, Xbox One, or PC.">
+			                Description:<br>
+			                <input type="text" class="form-control modal-form" ng-model="newTeam.desc" placeholder="Additional information.">
+			              </form>
+			            </div>
+			            <div class="modal-footer">
+			              <button class="btn btn-lg btn-block btn-success" ng-click="addTeam(newTeam)">Update Team</button>
+			         	</div>
+			         	</div>
+				    </div>
+				  </div>
+				</div> -->
+
+			</div>
+		</div> 
+	</div>
+</div>
